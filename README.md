@@ -82,7 +82,7 @@ For example, first use collaborative filtering approach to determine the similar
      <li> Check if the clusters have a feature in common that was not used in the clustering like an outcome variable, which often indicates that the clusters might help improve a predictive model 
 </ol>
 
-
+![](http://i.imgur.com/wttO56U.png)
 
 
 ##### Algorithm 2: K-means
