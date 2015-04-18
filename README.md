@@ -58,5 +58,31 @@ For example, first use collaborative filtering approach to determine the similar
 - Maximum Distance
   - The distance between two points in the clusters that are the farthest
   
-##### Algorithm 1: Hierarchiccal 
+##### Algorithm 1: Hierarchiccal
+<ol>
+  <li>Each data point respresents a cluster</li>
+  <li>Combine two nears clusters (Euclidean, Centroid) </li>
+  <li>Continue combining until only one cluster</li>
+  <li>Graph the Dendrogram: 
+      <ul>
+          <li>The data points are listed along the bottom</li>
+          <li>The height of the lines represents the distantce between the clusters were when they were combine </li>
+      </ul>
+  <li>Use the dendrogram to decide how many clusters we want
+    <ul>
+      <li>Draw a horizontal line across the dendrogram</li>
+      <li>The number of vertical lines get crossed is the number of clusters there will be</li>
+      <li>The farthest the horizontal line can move up and down without hitting other horizontal lines, the better that choice of the number of cluster is. </li>
+      <li>When comparing the number of clusters, we also need to consider how many clusters make sense for the particular application we are working with.</li>
+    </ul>
+  </li>
+ <li>Analyze the picked clusters to see if they are meaningful 
+  <ul>
+     <li> Look at the basic statistics for each clust: max, min, mean
+     <li> Check if the clusters have a feature in common that was not used in the clustering like an outcome variable, which often indicates that the clusters might help improve a predictive model 
+</ol>
+
+
+
+
 ##### Algorithm 2: K-means
