@@ -2,7 +2,7 @@
 
 - <b>Goal: </b>How to offer customers accurate movie recommendations based on a customers's own perferences and viewing history?
 
-- <b>Data: </b>
+- <b>Available Data: </b>
   - movie's ranking from all users in the database
   - facts about the movies: actors, directors, genre classifications, year released, etc
 
@@ -21,11 +21,42 @@ For example, first use collaborative filtering approach to determine the similar
 
 # Clustering 
 #### <b> Pre-Analysis:</b>
-- Categories: Movies are categorized as belonging to different genres, each movie may belong to many genres
+- <i> Categories</i> : Movies are categorized as belonging to different genres, each movie may belong to many genres
  - Action, Adventure, Animation, Children's, Comedy, Crime, Documentary, Drama, Fantasy, Film Noir, Horror, Musical, Mystery, Romance, Sci-FI, Thriller, War, Western, (Unknown)
 - <b> Raised Question 1 : Is it possible to systematically find groups of movies with similar sets of genres?</b>
   - Answer: Clustering. 
   
-#### Goal:
+#### Usage:
 - To segment the data into similar groups
 - Not to make predictions, but clustering the data into "similar" groups can improve the predictive methods when building models for each "simliar" group
+- Warning: only use if the data set is large, be careful not to overerfit the model
+
+#### Algorithms:
+- Different algorithms differ in what makes a cluster and how to find them
+
+##### Step 1: Normalize the data points
+- Substract the mean of the data and dividing by the standard deviation 
+
+##### Step 2: Distance Between Points 
+- Euclidean distance (Most common)
+
+    ![](http://i.imgur.com/4aHtTXF.png)
+
+- Manhattan Distance
+  - Sum of absolute values instead of squares
+- Maximum Coordiante Distance
+  - Only consider measurement for which data points deviate the most 
+  
+##### Step 3: Distance Between Clusters
+- Centroid Distance (Most common) 
+  - The distance between centoids of clusters.
+    - Centroid is the point that has the average of all data points in each cluster 
+    
+- Minimum Distance
+  - The distance between two points in the clusters that are closest together
+  
+- Maximum Distance
+  - The distance between two points in the clusters that are the farthest
+  
+##### Algorithm 1: Hierarchiccal 
+##### Algorithm 2: K-means
