@@ -92,3 +92,14 @@ Let's say Amy like the movie "Men in Black (1997)":
   - "Men in Black" went into cluster 2, and that make sense since the cluster 2 is the action, adventure, sci-fi cluster.
 - Create a new data set with just the movies from selected cluster
   - The Cluster2 movies are good recommendation to Amy. They are movies like: Apollo 13, Jurassic Park, etc. 
+
+#### Algorithm 2: K-means clustering
+- Specify desired number of clusters k
+  - the number of cluster k can be selected from previous knowledge or experimenting
+  - can use algorithm several times with different random starting points 
+- Randomly assign each data point to a cluster
+  - can strategically select initial partition of points into clusters if yo have some knowledge of the data 
+- Compute cluster centroids
+- Re-assign each point to the closest cluster centroid
+- Re-compute cluster centroids
+- Repeat 4 and 5 until no improvement is made 
