@@ -58,7 +58,7 @@ For example, first use collaborative filtering approach to determine the similar
 - Maximum Distance
   - The distance between two points in the clusters that are the farthest
   
-#### Algorithm 1: Hierarchiccal
+#### Algorithm: Hierarchiccal
 <ol>
   <li>Each data point respresents a cluster</li>
   <li>Combine two nears clusters (Euclidean, Centroid) </li>
@@ -91,11 +91,4 @@ Let's say Amy like the movie "Men in Black (1997)":
 - Find out where is "Men in Black is in" and which cluster does it belong to
   - "Men in Black" went into cluster 2, and that make sense since the cluster 2 is the action, adventure, sci-fi cluster.
 - Create a new data set with just the movies from selected cluster
-  - The Cluster2 movies are good recommendation to Amy, and we can look at the first 10 titles in this cluster 
-
-
-      Cluster2[1:10]
-      
-
-  - They are movies like: Apollo 13, Jurassic Park, etc. 
-#### Algorithm 2: K-means
+  - The Cluster2 movies are good recommendation to Amy. They are movies like: Apollo 13, Jurassic Park, etc. 
