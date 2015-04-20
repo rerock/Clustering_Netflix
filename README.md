@@ -1,6 +1,7 @@
-## Background
+### Goal: To understand the analytics edge of recommendation systerms
 
-- <b>Goal: </b>How to offer customers accurate movie recommendations based on a customers's own perferences and viewing history? 
+#### Application 1: Netflix
+How to offer customers accurate movie recommendations based on a customers's own perferences and viewing history? 
 
 - <b>Available Data: </b>
   - movie's ranking from all users in the database
@@ -24,7 +25,7 @@ For example, first use collaborative filtering approach to determine the similar
 - <i> Categories</i> : Movies are categorized as belonging to different genres, each movie may belong to many genres
  - Action, Adventure, Animation, Children's, Comedy, Crime, Documentary, Drama, Fantasy, Film Noir, Horror, Musical, Mystery, Romance, Sci-FI, Thriller, War, Western, (Unknown)
 - <b> Raised Question 1 : Is it possible to systematically find groups of movies with similar sets of genres?</b>
-  - Answer: Clustering. 
+  - Answer: Try clustering. 
   
 ### Usage:
 - To segment the data into similar groups
@@ -103,3 +104,20 @@ Let's say Amy like the movie "Men in Black (1997)":
 - Re-assign each point to the closest cluster centroid
 - Re-compute cluster centroids
 - Repeat 4 and 5 until no improvement is made 
+
+### Application 2: cluster-then-predict future stock prices 
+- Use clustering to identify clusters of stocks that have similar returns over time
+- Use logistic regression to predict whether or not the stocks will have positive future returns
+
+####Goal: 
+To predict whether or not the stock return in December will be positive, using the stock returns for the first 11 months of the year.
+
+#### Data: 
+StocksCluster.csv, which contains monthly stock returns from the NASDAQ stock exchange. Each observation in the dataset is the monthly returns of a particular company in a particular year. The years included are 2000-2009. The companies are limited to tickers that were listed on the exchange for the entire period 2000-2009, and whose stock price never fell below $1.
+
+#### Cautions: 
+In cluster-then-predict, the goal is to predict the dependent variable, which is unknown to us at the time of prediction. If the outcome value was used to cluster, although the result might strongly outperforms a non-clustering alternative, it is wrong to use the outcome to determine the clusters. 
+
+When comparing two different clustering algorithms, the clusters are not displayed in a meaningful order, so while there may be a cluster produced by the k-means algorithm that is similar to a cluster produced by the Hierarchical method, it will not necessarily be shown first.
+
+For more details on this application, please check out the posted code.  
