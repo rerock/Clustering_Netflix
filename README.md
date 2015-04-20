@@ -1,4 +1,4 @@
-### Goal: To understand the analytics edge of recommendation systerms
+### Goal: To understand recommendation systerms - Clustering 
 
 #### Application 1: Netflix
 How to offer customers accurate movie recommendations based on a customers's own perferences and viewing history? 
@@ -115,7 +115,7 @@ To predict whether or not the stock return in December will be positive, using t
 #### Data: 
 StocksCluster.csv, which contains monthly stock returns from the NASDAQ stock exchange. Each observation in the dataset is the monthly returns of a particular company in a particular year. The years included are 2000-2009. The companies are limited to tickers that were listed on the exchange for the entire period 2000-2009, and whose stock price never fell below $1.
 
-#### Cautions: 
+#### Caution: 
 In cluster-then-predict, the goal is to predict the dependent variable, which is unknown to us at the time of prediction. If the outcome value was used to cluster, although the result might strongly outperforms a non-clustering alternative, it is wrong to use the outcome to determine the clusters. 
 
 When comparing two different clustering algorithms, the clusters are not displayed in a meaningful order, so while there may be a cluster produced by the k-means algorithm that is similar to a cluster produced by the Hierarchical method, it will not necessarily be shown first.
